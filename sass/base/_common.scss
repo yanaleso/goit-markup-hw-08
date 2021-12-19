@@ -1,0 +1,12 @@
+body {
+  background-color: var(--white-text-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+}
+
+.peculiarities,
+.activity,
+.team,
+.clients {
+  display: flex;
+}
