@@ -2,11 +2,21 @@
   padding-top: 0;
 }
 
+.section__activity {
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
+}
+
+.activity {
+  display: flex;
+  margin-left: -30px;
+}
+
 .activity__item {
   position: relative;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
 }
 
 .activity__subtitle {
