@@ -512,7 +512,7 @@ body {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    min-width: 696px;
   }
 }
 
@@ -953,6 +953,12 @@ body {
 @media screen and (max-width: 1199.98px) {
   .subscribe__input {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
   }
 }
 
