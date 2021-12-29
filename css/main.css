@@ -104,14 +104,13 @@ body {
 
 .header__container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu-btn {
   width: 40px;
   height: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: auto;
   background: var(--white-text-color);
   border: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -175,6 +174,12 @@ body {
 @media screen and (max-width: 767px) and (min-width: 480px) {
   .menu-container {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .menu-container {
+    align-items: center;
   }
 }
 
@@ -305,18 +310,18 @@ body {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 419px) {
+  .contact-nav__link {
+    font-size: 6vw;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .contact-nav__link {
     display: flex;
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
-  }
-}
-
-@media screen and (max-width: 1199.98px) {
-  .contact-nav__link {
-    padding-top: 21px;
   }
 }
 
@@ -329,21 +334,25 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 419px) {
+  .contact-nav__link-tel {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 767px) {
   .contact-nav__link-tel {
     font-size: 34px;
     line-height: 1.18;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-nav__link-tel {
     color: var(--accent-color);
   }
   .contact-nav__link-tel:hover, .contact-nav__link-tel:focus {
     color: var(--primary-text-color);
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .contact-nav__link-tel {
-    padding-bottom: 21px;
-    padding-top: 0;
   }
 }
 
@@ -374,6 +383,7 @@ body {
 
 .menu__socials {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -454,7 +464,7 @@ body {
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero-mob-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mob-2x.jpg");
   }
 }
 
@@ -466,7 +476,7 @@ body {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero-tab-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tab-2x.jpg");
   }
 }
 
@@ -481,13 +491,13 @@ body {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero-desk-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desk-2x.jpg");
   }
 }
 
 .hero__title {
   margin-bottom: 30px;
-  width: 360px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   color: var(--white-text-color);
@@ -826,6 +836,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1199.98px) {
+  .footer__top {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer__top {
     display: flex;
@@ -836,7 +852,6 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__top {
     justify-content: space-around;
-    margin-bottom: 60px;
   }
 }
 
@@ -919,7 +934,7 @@ body {
 }
 
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   padding: 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -979,12 +994,9 @@ body {
 }
 
 .modal {
-  width: 450px;
+  width: 100vw;
   padding: 40px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--white-text-color);
@@ -996,6 +1008,15 @@ body {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1126,6 +1147,12 @@ textarea {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+
+@media screen and (max-width: 447px) {
+  .modal__label-policy {
+    font-size: 11px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

@@ -16,13 +16,15 @@
 }
 
 .footer__top {
+  @media screen and (max-width: 1199.98px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
   }
   @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     justify-content: space-around;
-    margin-bottom: 60px;
   }
 }
 
@@ -99,7 +101,7 @@
 }
 
 .subscribe__input {
-  width: 450px;
+  width: 100%;
   padding: 15px 16px;
   background-color: transparent;
 
