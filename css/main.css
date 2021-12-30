@@ -874,16 +874,6 @@ body {
   margin-bottom: 20px;
 }
 
-.address-item:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-@media screen and (min-width: 1200px) {
-  .address-item:not(:last-child) {
-    margin-bottom: 9px;
-  }
-}
-
 .address__link {
   color: var(--white-text-color);
   font-style: normal;
